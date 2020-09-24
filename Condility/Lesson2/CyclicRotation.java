@@ -1,4 +1,6 @@
 import java.util.*;
+// The rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
+// The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
 
 public class CyclicRotation {
 
