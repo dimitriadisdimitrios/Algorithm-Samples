@@ -10,7 +10,7 @@ public class Java_Stdin_and_Stdout_I {
         Scanner sc=new Scanner(file);        
                 
         while(sc.hasNextLine()){
-            System.out.println(sc.nextLine());
+            System.out.println(sc.next());
         }
 
         sc.close();        
