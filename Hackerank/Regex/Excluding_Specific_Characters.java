@@ -4,12 +4,13 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Matching_Start_and_End {    
+public class Excluding_Specific_Characters {    
 
     public static void main(String[] args) {
         
         Regex_Test tester = new Regex_Test();
-        tester.checker("^\\d\\w{4}\\.$"); // Use \\ instead of using \ 
+        tester.checker("^[^\\d][^aeiou][^bcDF][^\\r\\n\\t\\f ][^AEIOU][^\\.\\,]$"); // Use \\ instead of using \ 
+    
     }
 }
 
@@ -23,4 +24,5 @@ class Regex_Test {
         Matcher m = p.matcher(Test_String);
         System.out.println(m.find());
     }   
+    
 }
