@@ -4,12 +4,12 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Backreferences_To_Failed_Groups {    
+public class Negative_Lookahead {    
 
     public static void main(String[] args) {
         
         Regex_Test tester = new Regex_Test();
-        tester.checker("^\\d\\d(-?)(\\d\\d\\1){2}\\d\\d$"); // Use \\ instead of using \ 
+        tester.checker("(\\S)(?!\\1)"); //Use '\\' instead of '\'.
     
     }
 }
@@ -22,7 +22,11 @@ class Regex_Test {
         String Test_String = Input.nextLine();
         Pattern p = Pattern.compile(Regex_Pattern);
         Matcher m = p.matcher(Test_String);
-        System.out.println(m.find());
+        int Count = 0;
+        while(m.find()){
+            Count += 1;
+        }
+        System.out.format("Number of matches : %d",Count);
     }   
     
 }
